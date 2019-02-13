@@ -1,0 +1,8 @@
+1er solution
+
+
+if ((namereg.test(nom)) && (namereg.test(prenom)) && (emailreg.test(mail)) && (telreg.test(phone))){
+alert('Votre nom : ' + nom + 'Votre prénom : ' + prenom + 'Votre mail : ' + mail+ 'Votre numéros de téléphone : ' + phone)
+}else{
+alert('Vérifier il y a une erreur ');
+}
