@@ -1,21 +1,22 @@
+$(function(){
+  $('#button').click(function(){
+    var regexName = /^([A-Z]{1}[a-zÀ-ÖØ-öø-ÿ]+)([- ]{1}[A-Z]{1}[a-zÀ-ÖØ-öø-ÿ]+){0,1}$/;
+    var regexDate = /^\d{4}[-](0?[1-9]|1[012])[-](0?[1-9]|[12][0-9]|3[01])$/;
+    var regexPlace = /^[A-Z]{1}[a-zA-Zéèêàç-']*/;
+    var regexText =/^[A-Za-z0-9-, À-ÖØ-öø-ÿ]+$/;
 
-$(function() {
-
-  $('#genere').click(function() {
-
-    var alphgex = /[A-Za-z-]/;
-    var numbergex = /^(([0-2]{1}[\d]{1})|([3]{1}[0-1]{1}))\/(([0]{1}[\d]{1})|([1]{1}[0-2]{1}))\/([0-9]{4})$/;
-    var name = $('#name').val();
+    var lastName = $('#lastName').val();
     var firstName = $('#firstName').val();
-    var birthDate =$('#birthDate').val();
-    var placeOfBith = $('#placeOfBith').val();
-    var job = $('#job').val();
+    var birthdate = $('#birthdate').val();
+    var birthplace = $('#birthplace').val();
+    var employment = $('#employment').val();
     var society = $('#society').val();
 
-    if (alphgex.Match(name, firstName, placeOfBith, job, society) && birthDate.Match(numbergex)){
-      alert( name + firstName + ' née le ' + birthDate + 'à' + placeOfBith + 'actuellement' + job + 'à' + society);
+    // var regexName = /^[a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+([-'\s][a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+)$/;
+    if (lastName.match(regexName) && firstName.match(regexName) && birthdate.match(regexDate) && birthplace.match(regexPlace) && employment.match(regexText) && society.match(regexText)){
+      alert(lastName + firstName + ' né le ' + birthdate + ' à ' + birthplace + ' actuellement ' + employment + ' à '+ society);
     }else{
-      alert('Vérifier il y a une ou plusieurs erreurs');
+      alert('champs invalide');
     }
   });
 });

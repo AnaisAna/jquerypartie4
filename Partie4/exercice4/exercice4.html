@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>exercice4</title>
-  </head>
-  <body>
-    <form>
-      <label>Nom : </label>
-      <input type="text" id="name">
-<label>Prénom : </label>
-<input type="text" id="firstName">
-<label>Date de naissance :</label>
- <input type="text" id="birthDate">
- <label>Lieu de naissance :</label>
-  <input type="text" id="placeOfBith">
-<label>Emploi : </label>
-<input type="text" id="job">
-<label>Société : </label>
-<input type="text" id="society">
-    </form>
-    <button id="genere" type="button" name="button">Généré</button>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<head>
+  <meta charset="utf-8" />
+  <title>Exercice 4</title>
+</head>
+<body>
+  <form>
+    <label for="lastName">Votre nom</label>
+    <input type="text" name="lastName" id="lastName" maxlength='20' autofocus required /><br>
+
+    <label for="firstName">Votre prénom</label>
+    <input type="text" name="firstName" id="firstName" maxlength='20' required /><br>
+
+    <label for="birthdate">Date de naissance</label>
+    <input type="date" name="birthdate" id="birthdate" required /><br>
+
+    <label for="birthplace">Lieu de naissance</label>
+    <input type="text" name="birthplace" id="birthplace" maxlength='20' required /><br>
+
+    <label for="employment">Emploi</label>
+    <input type="text" name="employment" id="employment" maxlength='20' required /><br>
+
+    <label for="society">La société</label>
+    <input type="text" name="society" id="society" maxlength='20' required /><br>
+  </form>
+  <input type="button"  id="button" value="Générer" />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="asset/js/script.js"></script>
-  </body>
+</body>
 </html>
